@@ -1,9 +1,31 @@
 body {
+  background-color: #242424;
+  color: #91ac91;
   font-family: 'system-ui';
   font-size: 1.5em;
-  margin: 1em 3em;
+  margin: 0em;
+  line-height: 1.4em;
+}
+li {
+  margin: 1em;
 }
 
-a:visited {
-  color: blue;
+a:visited, a, h1, h2, h3, b {
+  color: green;
+}
+
+nav {
+  background-color: green;
+  display: block;
+  width: 100%;
+  padding: 1em;
+}
+
+nav a, nav a:visited {
+  text-decoration: none;
+  color: #242424;
+}
+
+.main {
+  margin: 0em 3em;
 }
