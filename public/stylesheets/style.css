@@ -1,8 +1,9 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'system-ui';
+  font-size: 1.5em;
+  margin: 1em 3em;
 }
 
-a {
-  color: #00B7FF;
+a:visited {
+  color: blue;
 }
