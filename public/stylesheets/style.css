@@ -29,3 +29,26 @@ nav a, nav a:visited {
 .main {
   margin: 0em 3em;
 }
+
+.terminal {
+  border-radius: .5em;
+  padding: 1em;
+  display: block;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.javascript {
+  padding: 0 0.5em;
+  color: blue;
+  font-style: italic;
+  background-color: white;
+}
+
+.ruby {
+  padding: 0 0.5em;
+  color: red;
+  font-style: italic;
+  background-color: white;
+}
