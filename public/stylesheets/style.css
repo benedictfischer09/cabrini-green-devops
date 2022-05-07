@@ -1,7 +1,7 @@
 body {
-  background-color: #242424;
-  color: #91ac91;
-  font-family: 'system-ui';
+  background-color: white;
+  color: #1d2b1d;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   margin: 0em;
   line-height: 1.4em;
@@ -23,7 +23,7 @@ nav {
 
 nav a, nav a:visited {
   text-decoration: none;
-  color: #242424;
+  color: white;
 }
 
 .main {
@@ -51,4 +51,8 @@ nav a, nav a:visited {
   color: red;
   font-style: italic;
   background-color: white;
+}
+
+.welcome a {
+  text-decoration: none;
 }
