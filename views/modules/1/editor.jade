@@ -1,18 +1,41 @@
 extends ../../layout
 
 block content
+  p
+    a(href="/modules/1") Back
+
   h2 Editor
   p This module should take you 15 minutes to complete. It will teach you what a code editor is and how to use one.
 
-  p When you are working in the technology field a big part of your day will be spent making changes to different files. One of the best tools to help you make those file changes is a code editor called VS Code. Watch the video below to get a quick 5 minute introduction&nbsp;
-    a(target="_blank" href="https://code.visualstudio.com/docs/introvideos/basics") Intro to VS Code
+  p When you are working in the technology field a big part of your day will be spent making changes to different files. One of the best tools to help you make those file changes is a code editor. We will being using a free editor called Visual Studio Code (aka VSCode). Watch the video below to get a quick 7 minute introduction&nbsp;
 
-  h2 Projects
-  p 1. Create a file named hello.js
-  p 2. Create a file named goodbye.rb
-  p 3. Open the hello.js file by pressing cmd + p and typing in the file name and pressing enter.
+  h2 Video - 7min
+  p
+    iframe(width="560",height="315", src="https://www.youtube.com/embed/B-s71n0dHUk", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ,allowfullscreen)
+
+  h2 Projects - 5 min
+  p 1. Create a file using your editor and save it with the name hello.js
+  p 2. Create a second file and name it goodbye.rb
+  p 3. Open the hello.js file by pressing&nbsp;
+    span.shortcut cmd + p&nbsp;
+    | and typing in the file name and pressing enter.
   p 4. Add the following "code" into your hello.js file: &nbsp;
-    span.javascript console.log("hello")
-  p 5. Did you notice the colors changing in the editor? That is one of the things that makes the editor so helpful. Try adding the the following to your goodbye.rb file: &nbsp;
-    span.ruby puts "hello"
-  p 6. Search for the word hello in the contents of all of your files
+  p
+    span.code console.log("hello")
+  p.hint
+    | Notice the colors changing in the editor. Those colors are hints that you will understand later. The hints are one of the things that make editors so helpful to developers.
+  p 5.  Try adding the the following to your goodbye.rb file: &nbsp;
+  p
+    span.code puts "hello"
+   p.hint
+    | The editor knows that files that end in .js and files that end in .rb have different rules so it gives you different hints depending on the file extension.
+
+  p 6. Search inside of all the files you have open in your editor by pressing
+    span.shortcut &nbsp;cmd + shift + f&nbsp;
+    | &nbsp;then typing the word hello and pressing enter. How many results did the editor find?
+
+  h2 Nice Job!
+  p You now know the basics of how to use an editor. Later you can come back and learn advanced tips and tricks by watching the following playlist&nbsp;
+    a(target="blank", href="https://www.youtube.com/playlist?list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6") Getting Started with Visual Studio Code
+  p
+    a(href="/modules/1") Back
