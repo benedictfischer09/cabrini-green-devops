@@ -6,6 +6,12 @@ body {
   margin: 0em;
   line-height: 1.4em;
 }
+
+dt, .term {
+  color: green;
+  font-weight: bold;
+}
+
 li {
   margin: 1em;
 }
@@ -39,6 +45,10 @@ nav a, nav a:visited {
   color: white;
 }
 
+.terminal p {
+  margin: 0
+}
+
 .code {
   padding: 0.5em;
   color: white;
@@ -46,7 +56,7 @@ nav a, nav a:visited {
   font-style: italic;
 }
 
-.shortcut {
+.shortcut, .file-name, .folder-name, .url, .italic {
   font-style: italic;
 }
 
