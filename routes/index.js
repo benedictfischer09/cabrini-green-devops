@@ -14,6 +14,9 @@ router.get('/terms', function(req, res, next) {
 router.get('/prereqs', function(req, res, next) {
   res.render('prereqs');
 });
+router.get('/advice', function(req, res, next) {
+  res.render('advice');
+});
 router.get('/modules/*', function(req, res, next) {
   res.render(`.${req.path}`);
 });
