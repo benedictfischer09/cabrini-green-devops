@@ -1,0 +1,183 @@
+extends ../../layout
+
+block content
+  h2 Programs
+
+  p This lesson should take you 1 hour to complete. It will teach you what a program is, what a process is, and the key parts of a process.
+
+  h2 Text Lesson - 45 min
+
+  p What programs have you seen already?
+    ul
+      li editor - program to help a human make changes to files
+      li terminal - program to interact with the computer using other programs
+      li ls - program that can output the names of files inside of a directory
+      li pwd - program that tells you where you are in the file system
+      li cd - program that allows you to move your location on the file system
+      li npm - program we used to start a web server
+      li git - program to perform version control operations
+
+  p As you can see&nbsp;
+    span.term programs
+    span &nbsp;are a fundamental idea of what we are studying. Some programs are designed for humans to interact with directly. Other programs are designed for computer programs to interact with each other.
+
+  p Programs can be very large and have a lot of responsibilties or they can be tiny and only targeted to address very specific problems. The ls program is a very tiny program whereas the VS Code program is quite large.
+
+  p The word to make a program start is usually called a&nbsp;
+    span.term command
+    span &nbsp;e.g. the ls command is used to run the ls program
+
+  p When a program is running we call it a&nbsp;
+    span.term process
+
+  h3 Interacting with processes
+
+  p Let's try out a program called sleep that we have never used before. In the terminal run
+    span.terminal sleep 3
+
+  p What do you think happened when we ran that command? ... Answer: It waited for 3 seconds and then the process exited.
+
+  p Now lets try again with a much larger number
+    span.terminal sleep 3600
+    span &nbsp;this process will wait for 3600 seconds (an hour) before it exits...
+
+  p Maybe we decide that was a bad idea and we want to make that process stop. Let's open a second terminal and find our running process using yet another program called ps (which stands for process status)
+    span.terminal ps
+  p the output from that command is a&nbsp;
+    span.term table
+    span &nbsp;that might look like
+  p
+    table
+      tr
+        th PID
+        th TTY
+        th TIME
+        th CMD
+      tr
+        td 18915
+        td ttys000
+        td 0:00.02
+        td -bash
+      tr
+        td 19454
+        td ttys000
+        td 0:00.00
+        td sleep 3600
+  p
+    span Notice the&nbsp;
+    span.italic sleep 3600 in the&nbsp;
+    span.italic CMD
+    span &nbsp;column. That column is showing the command that started the process! If you look at the first column it is called&nbsp;
+    span.italic PID
+    span &nbsp;which stands for process ID
+
+  p We can use that ID to stop the process. We will use another new program called kill to stop the running process
+    span.terminal kill &lt;pid&gt;
+  p.hint Every time you see &lt;something&gt; it means you should replace all those letters including &lt; and &gt; with a specific value. The name inside the &lt; and &gt; gives you a clue what the value should be, in my example the full command would be:&nbsp;
+    br
+    span.bold kill 19454
+    br
+    span because that is the PID value in my table, but it will be different for you.
+
+  p Did you notice what happened in the other terminal when you ran that command? It should have displayed
+    div.terminal
+      p sleep 3600
+      p Terminated: 15
+
+  p What just happened? We sent our sleep processs a special&nbsp;
+    span.term signal
+    span &nbsp;by using the kill program. The signal we sent told the sleep process to stop, and it did.
+  p What does the 15 mean? Try the whole sequence again. Run the sleep 3600 command and then use ps to find the pid and kill it. See if you get the same output
+
+  p You should have gotten the same result! Later we will talk about what the 15 means. But first let's change the result a bit by changing how we use the kill command.
+
+  h3 Command arguments and flags
+
+  p Programs become a lot more useful if they can take data in and change how they behave based on the data they are provided.
+  p We have already seen this in action with the sleep command. We were able to control how long the program waited (3s vs 3600s) by providing the program a number of seconds. The way we provided the data is called an&nbsp;
+    span.term argument
+  p Arguments come after the command name seperated by a space. 3600 was an argument we gave to the sleep command.
+  p Some programs also allow&nbsp;
+    span.term options aka flags
+    span &nbsp;as easy ways to perform common tasks. e.g.&nbsp;
+    span.terminal ls -a
+    span &nbsp;shows all files including hidden files, a very common thing to do but not the&nbsp;
+    span.term default.
+    span &nbsp;behavior if you just run ls without the -a flag. Without the -a flag hidden files and folders are not included in the result.
+  p Flags can be used to make common tasks easier, but they can also be used to provide data to a program. e.g.&nbsp;
+    span.terminal git commit -m 'add my notes'
+  p the m flag tells the git program that what comes next is the message for the commit.
+  p Sometimes single letter flags become confusing because it is not obvious what they stand for.  Many programs also support a longer version of the flag usfing two dashes --  e.g.&nbsp;
+    span.terminal git commit --message 'add my notes'
+  p This type of approach is slower to type out for common tasks, but on the other hand it can make commands easier for humans to read and understand.
+
+  p Let's start another sleep command and then use a flag the kill command offers&nbsp;
+    span.terminal kill -s KILL &lt;pid&gt;
+    span &nbsp;we are using the s flag to change the signal kill sends to the process. Did you notice the output change?
+  div.terminal
+    p sleep 3600
+    p Killed: 9
+
+  p So what do 15 and 9 mean? Those numbers represent different signals you can send a process. 15 means TERM aka terminate.  This is a nice way to ask a program to stop, the program gets a chance to perform cleanup or save data before it ends. 9 means KILL which is the more forceful way to make a program stop. Sometimes programs get stuck and they don't end when they get a TERM signal, we can force them to end with the KILL signal.
+
+  p As we mentioned before when something is a common task people often create shorter ways to perform that task.&nbsp;
+    span.terminal kill -9 &lt;pid&gt;
+    span &nbsp;is a shorter way to tell the kill program to use the KILL signal instead of the TERM signal.
+
+  p.hint Killing a program you started is a very common task. Therefore, there is an even easier way to kill a program which you started in the terminal.&nbsp;
+    span.shortcut ctrl + c
+    span &nbsp;will send the program the TERM&nbsp;
+    span.shortcut ctrl + z
+    span &nbsp; will send the program the  KILL signal.
+
+  h3 Manuals
+
+  p How does anyone ever find out what a program does and what all its flags do? Many programs offer manuals, if you type&nbsp;
+    span.terminal man kill
+    span &nbsp;that will open a&nbsp;
+    span.term command line text editor
+    span &nbsp;and display information about how to use the programs
+    pre
+      p NAME kill
+      p – terminate or signal a process
+
+    p in the output it shows some of the most common signals people send to programs and what number represents them
+    table
+      tr
+        td 1
+        td HUP (hang up)
+      tr
+        td 2
+        td INT (interrupt)
+      tr
+        td 3
+        td QUIT (quit)
+      tr
+        td 6
+        td ABRT (abort)
+      tr
+        td 9
+        td KILL (non-catchable, non-ignorable kill)
+      tr
+        td 14
+        td ALRM (alarm clock)
+      tr
+        td 15
+        td TERM (software termination signal)
+  p press&nbsp;
+    span.shortcut q
+    span &nbsp; to quit the editor and return to your terminal.
+
+  p.hint Manuals are helpful, but so is searching on Google!
+
+  h3 Exit Codes
+  p When a program finishes you might want to know if it was successful or not. When a program exits it returns a&nbsp;
+    span.term return code
+    span &nbsp;which is just a number. 0 means the program was successful , all the other numbers are used to indicate different types of errors.
+  p.hint This is the opposite of most areas of software where 1 means true/succcess and 0 means false/failure
+
+  h2 Projects - 1 hour
+  ol
+    li TODO
+  h2 Nice Job!
+  p You now know a lot about programs!
