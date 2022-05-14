@@ -1,0 +1,44 @@
+extends ../../layout
+
+block content
+  h2 Git
+  p This lesson should take you 2 hours to complete. It will teach you the core concepts and commands of the git version control tool.
+
+  p Git is a tool you will likely use every day because most companies need multiple developers to collaberate together and they want to keep track of the history of changes. While git has many advanced features the core ideas are quite simple and you can go a long with with just a little bit of knowledge.
+
+
+  h2 Video - 1hr 9min
+  p
+    iframe(width="560", height="315", src="https://www.youtube.com/embed/RGOj5yH7evk", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+
+  h2 Projects - 45 min
+  ol
+    li Sign up for a free account on&nbsp;
+      a(target="blank", href="https://github.com") Github
+    li Fork&nbsp;
+      a(href="https://github.com/benedictfischer09/cabrini-green-devops") this repo
+      span &nbsp; so that you have your own copy of it
+    li Copy the URL for your forked version of the project. It should look like this&nbsp;
+      span.url https://github.com/&lt;username&gt;/cabrini-green-devops
+      span &nbsp; where &lt;username&gt; will be replaced by your actual username
+    li Now let's clone your personal fork of the repo. In the terminal run the following
+      p.hint you need to replace the &lt;url&gt; placeholder below with the URL you copied in the previous step
+      div.terminal
+        | git clone &lt;url&gt;
+    li What can you do with all the files you just copied? One thing you can do with these files is start up a web server! To do this in the terminal run
+      div.terminal
+        p cd cabrini-green-devops
+        p npm install
+        p npm start
+      p Then in your browser visit&nbsp;
+        a(target="blank", href="http://localhost:3000/modules/1/") http://localhost:3000/modules/1/
+    li Now lets make an edit to that page. Open the folder you just cloned in your editor. Open the file called views/modules/1/index.jade Add a ✅ at the end of lines 9 and 11 to indicate to yourself that you have successfully completed them. Refresh the&nbsp;
+      a(target="blank", href="http://localhost:3000/modules/1/") http://localhost:3000/modules/1/
+      span &nbsp;tab in your browser to ensure the page looks good, you should see your ✅ on the page.
+    li Your change is ready to be permanently stored in the git repository. In the terminal stage the file you changed and then commit it using the message "completed the editor and terminal sections"
+    li Next let's start doing something you will do for the rest of the entire course. Building up your own private dictionary of terms! In your editor press
+      span.shortcut cmd + p
+      span &nbsp;and search for the file called terms.jade. When you find it start defining some of the terms you have learned so far.  Some examples you might want to define are: Repo, Commit, Branch, Stage, Merge.  Define as many as you would like (more tends to be better)
+
+  h2 Nice Job!
+  p You are now using the power of the editor, the terminal, and git together! Keep it up!
