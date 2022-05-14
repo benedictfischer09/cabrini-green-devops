@@ -20,5 +20,8 @@ router.get('/advice', function(req, res, next) {
 router.get('/modules/*', function(req, res, next) {
   res.render(`.${req.path}`);
 });
+router.get('/advice/*', function(req, res, next) {
+  res.render(`.${req.path}`);
+});
 
 module.exports = router;
