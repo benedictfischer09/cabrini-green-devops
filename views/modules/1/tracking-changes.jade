@@ -1,0 +1,94 @@
+extends ../../layout
+
+block content
+  h2 Tracking Changes
+  p This lab should take you 1 hour to complete and you should do it with your mentor. It will introduce you to the workflow most companies use to change all software. In our example you are changing a book, but the ideas apply to anything you would change.&nbsp;
+    span.term Story
+    span &nbsp;is just a term used in software to refer to an assignment you should complete.
+
+  p.hint The concepts and commands in this section are ideas you will study in depth during the next lesson on the git version control system.
+
+  p Ask your mentor to setup the material for this lab
+
+  h2 Story 1 - The weather
+  p Your manager wants you to add some information about the weather to page 1 of the book.
+
+  ul
+    li Place a red change that discusses weather on page 1 of the book.
+    li Follow the instructions on the "stage" command
+    li Follow the instructions on the "commit" command
+
+  p Great job you did the work! But nobody can see your work yet they ask you to make the work available to the team for review.
+
+  ul
+    li Follow the instructions on the "push" command with destination Github
+
+  h2 Story 2 - Coffee
+  p Your manager was very happy with your fast work, but she noticed you didn't follow a process the team uses for getting work reviewed. She would like you to use the new process for your upcoming coffee change.
+
+  ul
+    li Follow the instructions on the "create branch" command using the branch name cofee-branch
+    li Place a red change that discusses coffee on page 2 of the book.
+    li Follow the instructions on the "stage" command
+    li Follow the instructions on the "commit" command
+    li Follow the instructions on the "push" command with destination Github
+
+  p You think your changes are great but you have to wait for the other developer to review them. We will come back to this work later for now it is time to start work on your final story.
+
+  h2 Story 3 - Exercise
+  p Your manager would like you to make some urgent changes about exercise. You have a problem though you still have all your coffee changes and those are not ready to go yet.
+
+  ul
+    li Follow the instructions on the "checkout" command using the branch name master
+    li Follow the instructions on the "create branch" command using the branch name exercise-branch
+    li Place a red change that discusses exercise on page 3 of the book.
+    li Follow the instructions on the "stage" command
+    li Follow the instructions on the "commit" command
+    li Follow the instructions on the "push" command with destination Github
+
+  p You show your changes to your manager and she is happy with them so she tells you to merge them.
+  ul
+    li Follow the instructions on the "checkout" command using the branch name master
+    li Follow the instructions on the "merge" command to merge in the commits from the exercise-branch
+
+  h2 Story 2 - Continued
+  p The other developer is finally ready to review your work. He lives in a different part of the country so you can't just show him your laptop.  Instead he will pull your changes to look at them
+
+  ul
+    li Follow the instructions on the "checkout" in developer 2 repo using the branch name coffee-branch
+    li Follow the instructions on the "pull" command with destination Github
+
+  p The developer notices that mexico needs to be capitalized and asks you to fix that
+  ul
+    li Follow the instructions on the "checkout" in your repo using the branch name coffee-branch
+    li Place a red change that fixes the capitalization on page 2 of the book.
+    li Follow the instructions on the "stage" command
+    li Follow the instructions on the "commit" command
+    li Follow the instructions on the "push" command with destination Github
+
+  p The developer tells you that your changes look good and you should go ahead and merge them.
+
+  ul
+    li Follow the instructions on the "checkout" command using the branch name master
+    li Follow the instructions on the "merge" command to merge in the commits from the coffee-branch
+
+  h2 Materials
+  ul
+    li Book
+    li Changes
+    li Commits
+    li Commit messages
+    li Commands
+      ul
+        li stage - place a copy of the specified red changes on the book onto the stage
+        li commit - replace all red changes with white changes in the book. Take all changes on the stage and place them on a commit. Place a relevant message on the commit. Place the commit under the active branch star. Move the active branch star and the branch indicator down to be on your new commit
+        li push - look at the source branch indicator and copy all commits from your source repo to the destination repo that don't already exist at the destination
+        li create branch - place a new branch indicator in the repo directly next to the active branch star. Move the active branch star next to your new branch nam
+        li pull - look at the source branch indicator and copy all commits from the destination repo to your source repo that don't already exist at the source
+        li checkout - move the active branch indicator from where it is now to a new location. Remove all changes in the book that were on the old history but not the new history. Add all changes from the new history there were not in the old history.
+        li merge - move the commits in the history of the specified branch to the end of the active star branch. Move the master branch indicator to the last commit.
+    li Machines
+    li Stage
+    li Repos
+    li Branche Indicators
+    li Active Branch Star
