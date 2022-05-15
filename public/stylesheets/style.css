@@ -22,14 +22,23 @@ a:visited, a, h1, h2, h3, b {
 
 nav {
   background-color: green;
-  display: block;
-  width: 100%;
-  padding: 1em;
+}
+
+nav span a {
+  font-weight: bold;
+  display: inline-block;
+  float: none;
 }
 
 nav a, nav a:visited {
   text-decoration: none;
   color: white;
+  padding: 0.5em 1em;
+  float: right;
+}
+
+nav a:hover {
+  background-color: grey;
 }
 
 .main {
@@ -58,6 +67,10 @@ nav a, nav a:visited {
 
 .shortcut, .file-name, .folder-name, .url, .italic {
   font-style: italic;
+}
+
+.bold {
+  font-style: bold;
 }
 
 .welcome a {
