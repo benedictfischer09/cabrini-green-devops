@@ -3,63 +3,23 @@ extends layout
 block content
   div.welcome
     h1 Welcome to Cabrini-Green Devops!!
-    h2 Your Next 12 Months
-    p Each of the following sections will take you approximately 1 month to complete.  Some sections might be quicker for you and some sections might require extra time, that is fine! The skills tend to build on each other but it is possible to swap the order of some of them around.
+    p Why should you think about making a career switch to work in tech? Watch the video below to find out
+    p
+      iframe(width="1020",height="600",src="https://www.youtube.com/embed/jw98oh8HF5o",title="YouTube video player",frameborder="0",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowfullscreen)
+    p Many people want to work in tech but getting there is not easy. Companies expect you to already have a lot of skills before they will be willing to invest in hiring you and continuing to train you. This school will help you get the skills you need to qualify for many tech jobs.
+    p Let's talk about two types of tech jobs: developers and operations.
+      ul
+        li Developer jobs tend to focus on building products for people to use e.g. YouTube.
+        li Operations jobs tend to focus on providing a platform for the application to run securely and reliably.
+      span Devops jobs include elements of both of those two roles. Devops engineers build software to help the operations and development teams work well together. Watch the video below to learn more
+    p
+      iframe(width="1020",height="600",src="https://www.youtube.com/embed/6IfRG80KRIY",title="YouTube video player",frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
-    p Each of the sections has 3 types of content
-    ol
-      li Theory - these are videos or articles that introduce a technical concept
-      li Labs - hands on exercises that help you practice a technical concept
-      li Advice - ideas that you should be aware of because they will help you succeed, these will not be technical content
-
-    h3
-      a(href="/modules/1/index") Section 1 - Fundamentals - 40 hours
-    p In this section you will be introduced to some of the most fundamental ideas in computing. It will also introduce some useful tools which you will need for all future sections.
-    h3
-      a(href="/modules/2/index") Section 2 - Languages - 60 hours
-    p In the 1970s BASH shell scripting was invented as an easy way to create useful computer programs and it is still a super important skill to the day. In the 1990s Javascript was created as a langague that would be embedded with every web browser.
-    h3
-      a(href="/modules/3/index") Section 3 - Linux - 60 hours
-    p In early 1990s a new operating system, Linux, entered the market and changed computing forever.
-    h3
-      a(href="/modules/4/index") Section 4 - Databases - 60 hours
-    p In the early 1970s companies recognized the power of storing information digitally and ever since then people have been building new and better ways to store and access data.
-    h3
-      a(href="/modules/5/index") Section 5 - Web Apps - 60 hourss
-    p In late 1990s websites were finally going mainstream. Today web apps are a core foundation of the global economy much like food and energy.
-    h3
-      a(href="/modules/6/index") Section 6 - Networking - 40 hours
-    p In the early 1970s people around the global were trying to share information with each other faster. Wiring computers together so they can communicate quickly gave rise to the field of computer networking which is just as critical today as it was then.
-    h3
-      a(href="/modules/7/index") Section 7 - Containers - 40 hours
-    p In the mid 2000s people started working on ways to operate software similar to how frieght carriers treat goods, as standardized boxes that one set of tools can manage. This idea has caught fire and is extermely popular today.
-    h3
-      a(href="/modules/8/index") Section 8 - Cloud - 60 hours
-    p Amazon, Google, Microsoft and other major tech companies make billions of dollars every year operating datacenters that other companies can use. Knowing how to use the cloud services is a very in-demand skill.
-    h3
-      a(href="/modules/9/index") Section 9 - Kubernetes - 40 hours
-    p Building off your knowledge of containers, Kubernetes is a technology that helps operate large numbers of containers in a secure and predictable way.
-    h3
-      a(href="/modules/10/index") Section 10 - Infrastructure as Code - 40 hours
-    p This section builds off your knowledge of the cloud. IoC tools like Terraform help companies follow best practices for defining their infrastructure as code.
-    h3
-      a(href="/modules/11/index") Section 11 - Observability - 60 hours
-    p Logs, metrics, and traces are the core idea you must know to support production systems.
-    h3
-      a(href="/modules/12/index") Section 12 - Software Collaboration - 40 hours
-    p Github is one of the most popular websites for software engineers and companies. You should be familar with how to collaborate with others using that tool and other project management tools.
-
-    h2 Lesson Conventions
-    p Pay extra attention to terms that are&nbsp;
-      span.term bolded in green.
-      span &nbsp;Throughout the course you will be creating your own&nbsp;
-        a(href="/terms") dictionary
-        | &nbsp;of these terms and other terms.
-    p.hint If you see text in a gold box that is a hint you might find useful!
-
-    p.terminal Text inside a black box is showing terminal output or something you should type into the terminal. You will learn what a terminal is soon.
-
-    p Remember to write down any questions if you are confused and talk with your mentor about them!
+    h2 Want to get started?
+    p Checkout the&nbsp;
+      a(href="/roadmap") roadmap&nbsp;
+      span to read more about what you will be learning?
 
     script(type="application/javascript")
-      | document.querySelectorAll(".back").forEach((e) => e.remove())
+      | document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll(".back").forEach((e) => e.remove()) });
+

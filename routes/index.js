@@ -17,6 +17,9 @@ router.get('/prereqs', function(req, res, next) {
 router.get('/advice', function(req, res, next) {
   res.render('advice');
 });
+router.get('/roadmap', function(req, res, next) {
+  res.render('roadmap');
+});
 router.get('/modules/*', function(req, res, next) {
   res.render(`.${req.path}`);
 });
