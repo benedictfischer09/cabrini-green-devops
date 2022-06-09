@@ -2,14 +2,7 @@ extends layout
 
 block content
   h2 Your Next 12 Months
-  p Each of the following sections will take you approximately 1 month to complete.  Some sections might be quicker for you and some sections might require extra time, that is fine! The skills tend to build on each other but it is possible to swap the order of some of them around.
-
-  p Each of the sections has 3 types of content
-  ol
-    li 📖 Theory - these are videos or articles that introduce a technical concept
-    li 🥼 Labs - hands on exercises that help you practice a technical concept
-    li 🎗️ Advice - ideas that you should be aware of because they will help you succeed, these will not be technical content
-
+  p Each of the following 12 sections is a major field in the tech industry.  Learning the basic ideas and skills will take you approximately 1 month per section to complete.  Some sections might be quicker for you and some sections might require extra time, that is fine! The skills tend to build on each other but it is possible to swap the order of some of them around.
   h3
     a(href="/modules/1/index") Section 1 - Fundamentals - 40 hours
   p In this section you will be introduced to some of the most fundamental ideas in computing. It will also introduce some useful tools which you will need for all future sections.
@@ -38,8 +31,8 @@ block content
     a(href="/modules/9/index") Section 9 - Kubernetes - 40 hours
   p Building off your knowledge of containers, Kubernetes is a technology that helps operate large numbers of containers in a secure and predictable way.
   h3
-    a(href="/modules/10/index") Section 10 - Infrastructure as Code - 40 hours
-  p This section builds off your knowledge of the cloud. IoC tools like Terraform help companies follow best practices for defining their infrastructure as code.
+    a(href="/modules/10/index") Section 10 - CI / CD - 40 hours
+  p CI which stands for continuous integration means new code changes to an app are regularly built, tested, and merged to a shared repository. CD which stands for continuous delivery means automatically releasing a developer’s changes to production. These two concepts play a core role in Devops.
   h3
     a(href="/modules/11/index") Section 11 - Observability - 60 hours
   p Logs, metrics, and traces are the core idea you must know to support production systems.
@@ -48,6 +41,11 @@ block content
   p Github is one of the most popular websites for software engineers and companies. You should be familar with how to collaborate with others using that tool and other project management tools.
 
   h2 Lesson Conventions
+  p Each of the sections has 3 types of content
+  ol
+    li 📖 Theory - these are videos or articles that introduce a technical concept
+    li 🥼 Labs - hands on exercises that help you practice a technical concept
+    li 🎗️ Advice - ideas that you should be aware of because they will help you succeed, these will not be technical content
   p Pay extra attention to terms that are&nbsp;
     span.term bolded in green.
     span &nbsp;Throughout the course you will be creating your own&nbsp;
@@ -57,7 +55,14 @@ block content
 
   p.terminal Text inside a black box is showing terminal output or something you should type into the terminal. You will learn what a terminal is soon.
 
-  p Remember to write down any questions if you are confused and talk with your mentor about them!
+  p Checkout the&nbsp;
+    a(href="/prereqs") prereqs&nbsp;
+    span and make sure you perform all of them before you start section 1.
+
+  h2 🎗️ Mastering the material
+  p If you try to go through all the sections without coming back and practicing them you will probably forget everything.  In order to really master the material you should use a learning technique called spaced repetition. By simply re-watching lessons that you watched a week or a month earlier you will notice things you missed the first time and it will help prevent you from forgetting the things you already learned. Watch the video below to find out more.
+  p
+    iframe(width="1120",height="630",src="https://www.youtube.com/embed/cVf38y07cfk",title="YouTube video player",frameborder="0",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",allowfullscreen)
 
   script(type="application/javascript")
     | document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll(".back").forEach((e) => e.remove()) });
